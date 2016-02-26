@@ -1,15 +1,17 @@
 //
 //  ViewController.swift
 //  Midterm
-//
-//  Created by student on 2016-02-26.
-//  Copyright © 2016 student. All rights reserved.
+//  
+//  Stepper Buttons for shopping list
+//  Created by Kevin Donkers on 2016-02-26.
+//  Copyright © 2016 Kevin Donkers. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
 
+    //outlets for labels and steppers
     @IBOutlet weak var listTitle: UITextField!
     
     @IBOutlet weak var item1Stepper: UIStepper!
@@ -24,6 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var item4Stepper: UIStepper!
     @IBOutlet weak var item4Quantity: UILabel!
     
+    //action functions for when the stepper is incremented
     @IBAction func item1StepperQuantityChanged(sender: UIStepper) {
         item1Quantity.text = Int(sender.value).description
     }
@@ -40,6 +43,7 @@ class ViewController: UIViewController {
         item4Quantity.text = Int(sender.value).description
     }
     
+    //function to reset all app values
     @IBAction func cancelClick(sender: UIButton) {
         listTitle.text = "My Shopping List"
         
