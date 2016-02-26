@@ -10,16 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var item1Stepper: UIStepper!
+    @IBOutlet weak var item1Quantity: UILabel!
+    
+    @IBOutlet weak var item2Quantity: UILabel!
+    @IBOutlet weak var item2Stepper: UIStepper!
+    
+    
+    @IBOutlet weak var item3Quantity: UILabel!
+    
+    
+    @IBOutlet weak var item4Quantity: UILabel!
+    
+    
+    
+    @IBAction func item1StepperQuantityChanged(sender: UIStepper) {
+        item1Quantity.text = Int(sender.value).description
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+    
 
 }
 
