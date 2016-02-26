@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var listTitle: UITextField!
+    
     @IBOutlet weak var item1Stepper: UIStepper!
     @IBOutlet weak var item1Quantity: UILabel!
     
@@ -27,8 +29,31 @@ class ViewController: UIViewController {
     }
     
     @IBAction func item2StepperQuantityChanged(sender: UIStepper) {
+        item2Quantity.text = Int(sender.value).description
     }
     
+    @IBAction func item3StepperQuantityChanged(sender: UIStepper) {
+        item3Quantity.text = Int(sender.value).description
+    }
 
+    @IBAction func item4StepperQuantityChanged(sender: UIStepper) {
+        item4Quantity.text = Int(sender.value).description
+    }
+    
+    @IBAction func cancelClick(sender: UIButton) {
+        listTitle.text = "My Shopping List"
+        
+        item1Quantity.text = "0"
+        item1Stepper.value = 0
+        
+        item2Quantity.text = "0"
+        item2Stepper.value = 0
+        
+        item3Quantity.text = "0"
+        item3Stepper.value = 0
+        
+        item4Quantity.text = "0"
+        item4Stepper.value = 0
+    }
 }
 
